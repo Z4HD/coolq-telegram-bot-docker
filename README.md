@@ -18,8 +18,10 @@ docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据目录
 
 参考wine-coolq的的配置教程配置完coolq并启用SocketAPI插件后，输入下列指令开始bot的后台运行
 
-```
-docker exec -i ctb "python3 daemon.py start"
+```shell
+#       docker exec -it ctb su
+<容器内> python3 daemon.py start
+<容器内> exit
 ```
 
 输入`docker exec -it ctb su`以root身份深入到容器内部
