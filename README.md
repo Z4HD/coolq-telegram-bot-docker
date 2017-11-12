@@ -4,6 +4,9 @@
 
 每次构建都会从[jqqqqqqqqqq/coolq-telegram-bot](https://github.com/jqqqqqqqqqq/coolq-telegram-bot)的master分支拉取最新的代码。
 
+# 重要警示
+本容器正在开发中，切勿用于生产环境。
+
 # 运行
 使用与[coolq/wine-coolq](https://cqp.cc/t/34558)类似的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
 
@@ -12,6 +15,12 @@ docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据目录
 ```
 
 随后便可通过 `docker stop ctb`等指令控制后台服务的运行。
+
+参考wine-coolq的的配置教程配置完coolq并启用SocketAPI插件后，输入下列指令开始bot的后台运行
+
+```
+docker exec -i ctb "python3 daemon.py start"
+```
 
 输入`docker exec -it ctb su`以root身份深入到容器内部
 
