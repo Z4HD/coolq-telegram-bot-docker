@@ -12,7 +12,7 @@ RUN apt update &&\
     mv coolq-telegram-bot-dev coolq-telegram-bot &&\
     cd ./coolq-telegram-bot &&\
     mv bot_constant-json.py bot_constant.py &&\
-    pip install --upgrade pip &&\
+    pip3 install --upgrade pip &&\
     pip3 install -r requirements.txt &&\
     rm -f /tmp/CTBSource.zip
 
