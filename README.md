@@ -26,6 +26,7 @@ docker exec -i ctb "python3 daemon.py start"
 
 ### 注意事项
 1. 环境变量`CTB_JSON_SETTINGS_PATH`用于指定JSON格式转发Bot配置文件的路径（容器内），默认值`/home/user/coolq/bot_constant.json`。请将JSON格式配置文件重命名为`bot_constant.json`后放置于coolq数据目录下即可。
+2. 由于coolq数据卷不在容器内，您需要自行安装并启用jqqqqqqqqqq编译的[CQ Socket API](https://github.com/jqqqqqqqqqq/coolq-telegram-bot/releases/tag/v2.5.0)。[如何安装？](https://github.com/jqqqqqqqqqq/coolq-telegram-bot/tree/v2.5.0#安装酷q-socket-api)
 
 # Docker.com 一般的准则和建议
 - [ ] 容器应该是短暂的
