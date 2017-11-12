@@ -15,4 +15,4 @@ WORKDIR /home/user/coolq-telegram-bot
 
 ENV CTB_JSON_SETTINGS_PATH="/home/user/coolq/bot_constant.json"
 
-CMD [ "start && python3 daemon.py run" ]
+CMD [ "start && python3 daemon.py start" ]
