@@ -33,4 +33,4 @@ docker exec -i ctb "python3 daemon.py start"
 - [ ] 避免安装不必要的包
 - [ ] 每个容器只运行一个进程
 - [ ] 最小化层的数量
-- [ ] 排序多行参数
+- [x] 排序多行参数
