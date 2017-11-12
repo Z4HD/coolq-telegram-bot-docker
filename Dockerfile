@@ -1,7 +1,7 @@
 FROM coolq/wine-coolq
 
-LABEL maintainer="Z4HD@outlook.com"
-LABEL SourceCodeAutor="jqqqqqqqqqq@gmail.com"
+LABEL Maintainer="Z4HD@outlook.com"
+LABEL SourceCodeAuthor="jqqqqqqqqqq@gmail.com"
 
 WORKDIR /home/user
 
