@@ -2,7 +2,7 @@
 使用Docker容器化的QQ和Telegram的消息互转机器人。Source: jqqqqqqqqqq/coolq-telegram-bot
 镜像基于[coolq/wine-coolq](https://hub.docker.com/r/coolq/wine-coolq/)构建
 
-每次构建都会从[jqqqqqqqqqq/coolq-telegram-bot](https://github.com/jqqqqqqqqqq/coolq-telegram-bot)的master分支拉取最新的代码。
+每次构建都会从[jqqqqqqqqqq/coolq-telegram-bot](https://github.com/jqqqqqqqqqq/coolq-telegram-bot)的dev分支拉取最新的代码。
 
 # 重要警示
 本容器正在开发中，切勿用于生产环境。
