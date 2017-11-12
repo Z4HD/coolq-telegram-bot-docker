@@ -1,5 +1,8 @@
 FROM coolq/wine-coolq
 
+LABEL maintainer="Z4HD@outlook.com"
+LABEL SourceCodeAutor="jqqqqqqqqqq@gmail.com"
+
 WORKDIR /home/user
 
 RUN apt update &&\
