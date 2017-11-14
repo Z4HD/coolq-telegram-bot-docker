@@ -7,7 +7,8 @@ WORKDIR /home/user
 
 RUN apt update &&\
     apt -y install python3 python3-pip wget unzip&&\
-    wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/dev.zip &&\
+
+RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/dev.zip &&\
     sudo -Hu user unzip -d /home/user/ /tmp/CTBSource.zip &&\
     mv coolq-telegram-bot-dev coolq-telegram-bot &&\
     cd ./coolq-telegram-bot &&\
