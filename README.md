@@ -7,6 +7,12 @@
 # 重要警示
 本容器正在开发中，切勿用于生产环境。
 
+# 构建
+
+```shell
+sudo docker build -t "ctbi" .
+```
+
 # 运行
 使用与[coolq/wine-coolq](https://cqp.cc/t/34558)类似的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
 
