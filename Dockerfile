@@ -6,7 +6,7 @@ LABEL SourceCodeAuthor="jqqqqqqqqqq@gmail.com"
 WORKDIR /home/user
 
 RUN apt update &&\
-    apt -y install python3 python3-pip wget unzip&&\
+    apt -y install python3 python3-pip wget unzip
 
 RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/dev.zip &&\
     sudo -Hu user unzip -d /home/user/ /tmp/CTBSource.zip &&\
