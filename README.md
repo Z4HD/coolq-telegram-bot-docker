@@ -5,16 +5,22 @@
 每次构建都会从[jqqqqqqqqqq/coolq-telegram-bot](https://github.com/jqqqqqqqqqq/coolq-telegram-bot)的dev分支拉取最新的代码。
 
 # 重要警示
-本容器正在开发中，切勿用于生产环境。
+本容器正在测试中，不建议用于生产环境。
 
 # 构建
 
+## 构建稳定版bot镜像（master分支）
 ```shell
-sudo docker build -t "ctbi" .
+sudo docker build -t "ctb" .
+```
+
+## 构建开发板bot镜像（dev分支）
+```shell
+sudo docker build -t "ctb" -f Dockerfile-dev .
 ```
 
 # 运行
-使用与[coolq/wine-coolq](https://cqp.cc/t/34558)类似的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
+使用与[coolq/wine-coolq](https://cqp.cc/t/34558)相同的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
 
 ```shell
 docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据目录】:/home/user/coolq -e VNC_PASSWD=【VNC页面密码】 -e COOLQ_ACCOUNT=【酷Q机器人的QQ账号】 【构建的镜像hash或name】
