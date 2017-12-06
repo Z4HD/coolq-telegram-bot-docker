@@ -1,4 +1,4 @@
-# coolq-telegram-bot-docker (Deving)
+# coolq-telegram-bot-docker
 使用Docker容器化的QQ和Telegram的消息互转机器人。Source: jqqqqqqqqqq/coolq-telegram-bot
 镜像基于[coolq/wine-coolq](https://hub.docker.com/r/coolq/wine-coolq/)构建
 
@@ -11,19 +11,19 @@
 
 ## 构建稳定版bot镜像（master分支）
 ```shell
-sudo docker build -t "ctb" .
+sudo docker build -t "coolq-telegram-bot" .
 ```
 
-## 构建开发板bot镜像（dev分支）
+## 构建测试版bot镜像（dev分支）
 ```shell
-sudo docker build -t "ctb-dev" -f Dockerfile-dev .
+sudo docker build -t “coolq-telegram-bot-dev" -f Dockerfile-dev .
 ```
 
 # 运行
 使用与[coolq/wine-coolq](https://cqp.cc/t/34558)相同的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
 
 ```shell
-docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据目录】:/home/user/coolq -e VNC_PASSWD=【VNC页面密码】 -e COOLQ_ACCOUNT=【酷Q机器人的QQ账号】 【镜像的hash或name】
+docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据目录】:/home/user/coolq -e VNC_PASSWD=【VNC页面密码】 -e COOLQ_ACCOUNT=【酷Q机器人的QQ账号】 coolq-telegram-bot
 ```
 
 随后便可通过 `docker stop ctb`等指令控制后台服务的运行。
