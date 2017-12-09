@@ -8,19 +8,19 @@ WORKDIR /home/user
 RUN sudo add-apt-repository ppa:deadsnakes/ppa &&\
     sudo apt-get update &&\
     sudo apt-get -y install python3.6 wget unzip &&\
-    wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py &&\
-    python3.6 /tmp/get-pip.py &&\
-    sudo ln -s /usr/bin/python3.6 /usr/local/bin/python3 &&\
-    sudo ln -s /usr/local/bin/pip /usr/local/bin/pip3 &&\
-    rm -f /tmp/get-pip.py
+    sudo wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py &&\
+    sudo python3.6 /tmp/get-pip.py &&\
+    sudo rm -f /usr/bin/python3 &&\
+    sudo ln -s /usr/bin/python3.6 /usr/bin/python3 &&\
+    sudo rm -f /tmp/get-pip.py
 
-RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/master.zip &&\
+RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/dev.zip &&\
     sudo -Hu user unzip -d /home/user/ /tmp/CTBSource.zip &&\
     mv coolq-telegram-bot-master coolq-telegram-bot &&\
     cd ./coolq-telegram-bot &&\
     mv bot_constant-json.py bot_constant.py &&\
-    python3.6 -m pip install --upgrade pip &&\
-    python3.6 -m pip install -r requirements.txt &&\
+    pip3.6 install --upgrade pip &&\
+    pip3.6 install -r requirements.txt &&\
     rm -f /tmp/CTBSource.zip
 
 WORKDIR /home/user/coolq-telegram-bot
