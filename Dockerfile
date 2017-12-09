@@ -7,7 +7,10 @@ WORKDIR /home/user
 
 RUN sudo add-apt-repository ppa:deadsnakes/ppa &&\
     sudo apt-get update &&\
-    sudo apt-get -y install python3.6 wget unzip
+    sudo apt-get -y install python3.6 wget unzip %%\
+    wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py &&\
+    python3.6 /tmp/get-pip.py &&\
+    rm -f /tmp/get-pip.py
 
 RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/master.zip &&\
     sudo -Hu user unzip -d /home/user/ /tmp/CTBSource.zip &&\
