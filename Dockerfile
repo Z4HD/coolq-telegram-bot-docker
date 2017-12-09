@@ -10,6 +10,8 @@ RUN sudo add-apt-repository ppa:deadsnakes/ppa &&\
     sudo apt-get -y install python3.6 wget unzip &&\
     wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py &&\
     python3.6 /tmp/get-pip.py &&\
+    sudo ln -s /usr/bin/python3.6 /usr/local/bin/python3 &&\
+    sudo ln -s /usr/local/bin/pip /usr/local/bin/pip3 &&\
     rm -f /tmp/get-pip.py
 
 RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/master.zip &&\
