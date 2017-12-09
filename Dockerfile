@@ -14,9 +14,7 @@ RUN sudo add-apt-repository ppa:deadsnakes/ppa &&\
     sudo ln -s /usr/bin/python3.6 /usr/bin/python3 &&\
     sudo rm -f /tmp/get-pip.py
 
-RUN wget -O /tmp/CTBSource.zip https://github.com/jqqqqqqqqqq/coolq-telegram-bot/archive/dev.zip &&\
-    sudo -Hu user unzip -d /home/user/ /tmp/CTBSource.zip &&\
-    mv coolq-telegram-bot-dev coolq-telegram-bot &&\
+RUN git clone -b dev --depth 1 https://github.com/jqqqqqqqqqq/coolq-telegram-bot &&\
     cd ./coolq-telegram-bot &&\
     mv bot_constant-json.py bot_constant.py &&\
     pip3.6 install --upgrade pip &&\
