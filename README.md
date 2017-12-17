@@ -27,7 +27,7 @@ sudo docker build -t "coolq-telegram-bot" .
 
 ## 构建测试版bot镜像（dev分支）
 ```shell
-sudo docker build -t “coolq-telegram-bot-dev" -f Dockerfile-dev .
+sudo docker build -t "coolq-telegram-bot-dev" -f Dockerfile-dev .
 ```
 
 # 运行
