@@ -9,7 +9,7 @@ Source: jqqqqqqqqqq/coolq-telegram-bot
 每次构建都会从[jqqqqqqqqqq/coolq-telegram-bot](https://github.com/jqqqqqqqqqq/coolq-telegram-bot)拉取最新的代码。
 
 # 重要警示
-本分支的容器**正在测试**，不应将其部署于生产环境。
+本分支的容器**正在测试**，不建议将其部署于生产环境。
 
 # 构建
 >*表示死活登不上Docker.com的账号，因此暂时不发布至Docker Hub*，请手动构建，3Q2X。
@@ -62,7 +62,7 @@ sudo docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据�
 sudo docker exec -it ctb sh -c "python3 tools/bot-upgrade.py"
 ```
 
-##使用Py格式配置文件
+## 使用Py格式配置文件
 直接通过`git pull`升级至最新版本。
 
 ```shell
