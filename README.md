@@ -1,4 +1,4 @@
-# coolq-telegram-bot-docker v3.0
+# coolq-telegram-bot-docker v3.x
 
 使用Docker容器化的QQ和Telegram的消息互转机器人，本分支专为v3.x版本的coolq-telegram-bot设计。
 
@@ -16,7 +16,6 @@ Source: jqqqqqqqqqq/coolq-telegram-bot
 git clone https://github.com/Z4HD/coolq-telegram-bot-docker
 ```
 
-
 ## 构建稳定版bot镜像（master分支）
 ```shell
 sudo docker build -t "coolq-telegram-bot" .
@@ -24,11 +23,11 @@ sudo docker build -t "coolq-telegram-bot" .
 
 ## 构建测试版bot镜像（dev分支）
 ```shell
-sudo docker build -t “coolq-telegram-bot-dev" -f Dockerfile-dev .
+sudo docker build -t "coolq-telegram-bot-dev" -f Dockerfile-dev .
 ```
 
 # 运行
-使用与[coolq/wine-coolq](https://cqp.cc/t/34558)相同的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
+使用与[coolq/wine-coolq](https://cqp.cc/t/34558)和[richardchien/cqhttp](https://richardchien.github.io/coolq-http-api/3.3/#/Docker)相同的指令启动。将下面示例中的中括号内的内容（包括中括号）按实际情况修改。
 
 ```shell
 sudo docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据目录】:/home/user/coolq -e VNC_PASSWD=【VNC页面密码】 -e COOLQ_ACCOUNT=【酷Q机器人的QQ账号】 coolq-telegram-bot
@@ -48,22 +47,22 @@ sudo docker run --name=ctb -d -p 【VNC页面端口号】:9000 -v 【酷Q数据�
 
 ### 注意事项
 1. 环境变量`CTB_JSON_SETTINGS_PATH`用于指定JSON格式转发Bot配置文件的路径（容器内），默认值`/home/user/coolq/bot_constant.json`。请将JSON格式配置文件重命名为`bot_constant.json`后放置于coolq数据目录下即可。
-2. 由于coolq数据卷不在容器内，您需要自行安装并启用[CQ http API](https://github.com/jqqqqqqqqqq/coolq-telegram-bot/releases/tag/v2.5.0)。[如何安装？](https://github.com/jqqqqqqqqqq/coolq-telegram-bot/tree/v2.5.0#安装酷q-socket-api)
+2. 您需要自行安装并启用[CQ http API](https://github.com/richardchien/coolq-http-api/)。[如何安装？](https://richardchien.github.io/coolq-http-api/)
 
 # 更新
-
-##使用Py格式配置文件
-直接通过`git pull`升级至最新版本。
-
-```shell
-sudo docker exec -it ctb sh -c "git pull"
-```
 
 ## 使用Json格式配置文件（默认）
 使用tools/bot-upgrade.py升级，可在升级后保留对Json格式配置文件的支持。
 
 ```shell
 sudo docker exec -it ctb sh -c "python3 tools/bot-upgrade.py"
+```
+
+## 使用Py格式配置文件
+直接通过`git pull`升级至最新版本。
+
+```shell
+sudo docker exec -it ctb sh -c "git pull"
 ```
 
 # Docker.com 一般的准则和建议
