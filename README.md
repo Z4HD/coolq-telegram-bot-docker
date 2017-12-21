@@ -1,15 +1,12 @@
-# coolq-telegram-bot-docker v3.0（Deving）
+# coolq-telegram-bot-docker v3.0
 
-使用Docker容器化的QQ和Telegram的消息互转机器人，本分支专为v3.0版本的coolq-telegram-bot设计，当相关功能稳定时便会并入master。
+使用Docker容器化的QQ和Telegram的消息互转机器人，本分支专为v3.x版本的coolq-telegram-bot设计。
 
 Source: jqqqqqqqqqq/coolq-telegram-bot
 
 镜像基于[richardchien/cqhttp](https://richardchien.github.io/coolq-http-api/3.3/#/Docker)构建
 
 每次构建都会从[jqqqqqqqqqq/coolq-telegram-bot](https://github.com/jqqqqqqqqqq/coolq-telegram-bot)拉取最新的代码。
-
-# 重要警示
-本分支的容器**正在测试**，不应将其部署于生产环境。
 
 # 构建
 >*表示死活登不上Docker.com的账号，因此暂时不发布至Docker Hub*，请手动构建，3Q2X。
