@@ -1,5 +1,7 @@
 # coolq-telegram-bot-docker v3.x
 
+## 本镜像已不再维护
+
 使用Docker容器化的QQ和Telegram的消息互转机器人，本分支专为v3.x版本的coolq-telegram-bot设计。
 
 Source: jqqqqqqqqqq/coolq-telegram-bot
